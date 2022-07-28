@@ -42,10 +42,10 @@ class Solution:
             ans.append(temp)
 
         for i in range(n):
-            cnt = 0
-            for j in range(m - 1, 0, -1):
-                ans[i][j] = matrix[i][cnt]
-                cnt += 1
+            cnt = m - 1
+            for j in range(m):
+                ans[i][j] = matrix[cnt][i]
+                cnt -= 1
 
         return ans
 
